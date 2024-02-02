@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 
 	va_start(args_list, format);
 	count = 0;
-	indx = 0;
 
 	while (*format != '\0')
 	{
