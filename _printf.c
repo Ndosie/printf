@@ -26,7 +26,7 @@ int print_string(char *str)
  * @format: string to format
  *
  * Return: number of characters printed to the standard output
-*/
+ */
 int _printf(const char *format, ...)
 {
 	int ch;
@@ -48,13 +48,13 @@ int _printf(const char *format, ...)
 			switch (*++format)
 			{
 				case 'c':
-					ch = va_arg(args_list, char);
+					ch = va_arg(args_list, int);
 					count++;
 					putchar(ch);
 					break;
 				case 's':
 					char *str = va_arg(args_list, char *);
-					count += print_string(*str);
+					count += print_string(str);
 					break;
 				case '%':
 					count++;
