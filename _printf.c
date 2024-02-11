@@ -1,6 +1,3 @@
-#include <stdarg.h>
-#include "main.h"
-
 /**
  * _printf - the function which formats the string as per specifier
  * @format: string to format
