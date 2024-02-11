@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdarg.h>
+#include "main.h"
 
 /**
  * print_string - Prints the string from characters
