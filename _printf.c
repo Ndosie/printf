@@ -1,3 +1,26 @@
+#include "main.h"
+
+/**
+ * print_string - Prints the string from characters
+ * @str: string to print
+ *
+ * Return: number of characters printed
+ */
+int print_string(char *str)
+{
+	int count;
+
+	count = 0;
+
+	while (*str)
+	{
+		putchar(*str);
+		*str++;
+		count++;
+	}
+	return (count);
+}
+
 /**
  * _printf - the function which formats the string as per specifier
  * @format: string to format
@@ -31,13 +54,7 @@ int _printf(const char *format, ...)
 					break;
 				case 's':
 					char *str = va_arg(args_list, char *);
-
-					while (*str)
-					{
-						putchar(*str);
-						*str++;
-						count++;
-					}
+					count += print_string(*str);
 					break;
 				case '%':
 					count++;
@@ -52,4 +69,3 @@ int _printf(const char *format, ...)
 	va_end(args_list);
 	return (count);
 }
-
