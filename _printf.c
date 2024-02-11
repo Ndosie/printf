@@ -12,10 +12,9 @@ int print_string(char *str)
 
 	count = 0;
 
-	while (*str)
+	while (str[count] != '\0')
 	{
-		putchar(*str);
-		++*str;
+		putchar(str[count]);
 		count++;
 	}
 	return (count);
